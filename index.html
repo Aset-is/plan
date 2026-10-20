@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Апталық оқу жоспары</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f6;--card:#fff;--ink:#14213d;--mute:#5d6b85;--line:#d9dfea;--acc:#3a4fe0;--on:#fff;
+--c0:#3a63e8;--c1:#1f9d6b;--c2:#d98a00;--c3:#d6406b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--mute:#97a3bf;--line:#2a3555;--acc:#7c8cff;--on:#0e1424;--c0:#6b8cff;--c1:#3ccf95;--c2:#f2b13a;--c3:#ff6f95}}
+:root[data-theme="dark"]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--mute:#97a3bf;--line:#2a3555;--acc:#7c8cff;--on:#0e1424;--c0:#6b8cff;--c1:#3ccf95;--c2:#f2b13a;--c3:#ff6f95}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 120px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+h1{font-size:1.7rem;margin:0;letter-spacing:-.01em}
+.sub{color:var(--mute);margin:2px 0 0;font-size:.95rem}
+button{font:inherit;color:inherit;cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:7px 12px;font-size:.9rem}
+.btn:hover{border-color:var(--acc)}
+.btn.pri{background:var(--acc);color:var(--on);border-color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;display:grid;gap:14px}
+.big{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.big b{font-size:2.6rem;line-height:1;letter-spacing:-.03em}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--acc);border-radius:6px;transition:width .3s}
+.subs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px 18px}
+.subs small{display:flex;justify-content:space-between;color:var(--mute);font-size:.85rem;margin-bottom:3px}
+.dl{border-left:4px solid var(--c2);padding:6px 12px;font-size:.92rem;background:color-mix(in srgb,var(--c2) 10%,transparent);border-radius:0 8px 8px 0}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 0 8px}
+.tab{flex:1 0 auto;min-width:104px;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:9px 12px}
+.tab[aria-selected=true]{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc) inset}
+.tab b{display:block;font-size:.95rem}
+.tab span{font-size:.8rem;color:var(--mute)}
+.tab .bar{height:5px;margin-top:6px}
+.tool{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:6px 0 14px}
+.tool p{margin:0;flex:1 1 220px;color:var(--mute);font-size:.92rem}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;border-top:5px solid var(--c)}
+.sec>h2{margin:0;padding:12px 16px 4px;font-size:1.1rem;display:flex;justify-content:space-between;gap:8px}
+.sec>h2 small{font-weight:400;color:var(--mute);font-size:.85rem}
+.task{display:grid;grid-template-columns:auto 1fr auto;gap:2px 12px;padding:10px 16px;border-top:1px solid var(--line);align-items:center}
+.task.now{background:color-mix(in srgb,var(--c) 14%,transparent)}
+.task.done .t{text-decoration:line-through;color:var(--mute)}
+.task input[type=checkbox]{width:22px;height:22px;accent-color:var(--c);grid-row:1/3;margin:0}
+.t{font-weight:600}
+.h{grid-column:2;color:var(--mute);font-size:.85rem}
+.tm{font-variant-numeric:tabular-nums;font-size:.85rem;color:var(--mute);text-align:right}
+.acts{grid-column:2/4;display:flex;gap:6px;margin-top:4px;flex-wrap:wrap}
+.acts button{border:1px solid var(--line);background:none;border-radius:8px;padding:2px 9px;font-size:.8rem;color:var(--mute)}
+.acts button:hover{border-color:var(--c);color:var(--ink)}
+textarea{grid-column:1/4;width:100%;min-height:64px;margin-top:6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:.9rem;padding:8px;resize:vertical}
+.brk{text-align:center;color:var(--mute);font-size:.85rem;padding:4px 0 10px}
+.badge{display:inline-block;background:var(--c);color:#fff;border-radius:6px;padding:0 7px;font-size:.75rem;margin-left:6px}
+.timer{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;z-index:5}
+.timer output{font:700 1.7rem/1 "Segoe UI",Roboto,sans-serif;font-variant-numeric:tabular-nums;min-width:90px;text-align:center}
+.timer .lbl{max-width:260px;font-size:.88rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.empty{padding:26px;text-align:center;color:var(--mute)}
+:root{--bg:#f2f4f9;--acc:#2f4bd8;--sh:0 1px 2px rgba(15,27,61,.06),0 8px 24px rgba(15,27,61,.06)}
+body{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;padding-top:28px}
+h1{font-size:2rem;font-weight:800;letter-spacing:-.025em}
+.sub{font-weight:500}
+.btn{border-radius:999px;padding:8px 16px;font-weight:600;font-size:.85rem;box-shadow:var(--sh)}
+.hero{background:linear-gradient(135deg,#0c1632 0%,#1b2f78 60%,#2f4bd8 130%);color:#fff;border:0;border-radius:24px;padding:26px;grid-template-columns:auto 1fr;gap:22px 28px;box-shadow:0 18px 40px rgba(27,47,120,.28)}
+.hero .big{grid-row:1/3;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.hero .big b{width:132px;height:132px;border-radius:50%;display:grid;place-items:center;font-size:1.9rem;font-weight:800;background:radial-gradient(closest-side,#13214f 80%,transparent 82% 100%),conic-gradient(#7fe3b0 calc(var(--p,0)*1%),rgba(255,255,255,.16) 0)}
+.hero .sub{color:rgba(255,255,255,.75);font-size:.85rem}
+.hero>.bar{display:none}
+.hero .subs{align-self:end}
+.hero .subs small{color:rgba(255,255,255,.75)}
+.hero .bar{background:rgba(255,255,255,.16)}
+.hero .dl{grid-column:2;background:rgba(255,255,255,.1);border-left:3px solid #ffd479;color:#fff;border-radius:10px;padding:9px 14px;font-weight:500}
+@media(max-width:600px){.hero{grid-template-columns:1fr}.hero .big{grid-row:auto}.hero .dl{grid-column:1}}
+.tabs{gap:6px;padding:6px;background:var(--card);border-radius:18px;box-shadow:var(--sh);border:1px solid var(--line)}
+.tab{border:0;background:transparent;border-radius:13px;padding:10px 14px}
+.tab[aria-selected=true]{background:var(--acc);color:#fff;box-shadow:none}
+.tab[aria-selected=true] span{color:rgba(255,255,255,.8)}
+.tab[aria-selected=true] .bar{background:rgba(255,255,255,.3)}
+.tab[aria-selected=true] .bar>i{background:#fff}
+.tool{margin:18px 0}
+.tool p{font-weight:500;color:var(--ink)}
+.sec{border:1px solid var(--line);border-top:1px solid var(--line);border-left:6px solid var(--c);border-radius:20px;box-shadow:var(--sh)}
+.sec>h2{padding:16px 20px 8px;font-size:1.15rem;font-weight:700}
+.sec>h2 small{font-weight:600;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c);border-radius:999px;padding:2px 10px;align-self:center}
+.task{padding:12px 20px;gap:2px 14px}
+.task input[type=checkbox]{appearance:none;-webkit-appearance:none;width:26px;height:26px;border:2px solid var(--line);border-radius:50%;display:grid;place-content:center;background:transparent;cursor:pointer}
+.task input[type=checkbox]:checked{background:var(--c);border-color:var(--c)}
+.task input[type=checkbox]:checked::after{content:"";width:6px;height:12px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.task.now{box-shadow:inset 4px 0 0 var(--c)}
+.t{font-weight:600}
+.tm{font-weight:600;color:var(--ink);opacity:.7}
+.acts button{border-radius:999px;padding:3px 12px;font-weight:500}
+.badge{background:var(--c);border-radius:999px;padding:1px 9px;font-weight:600}
+.brk{margin:2px 0 14px;font-size:.8rem}
+.timer{left:50%;right:auto;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));width:max-content;max-width:94vw;border:0;border-radius:999px;background:#0c1632;color:#fff;padding:10px 14px 10px 22px;box-shadow:0 12px 32px rgba(12,22,50,.4)}
+.timer .lbl{color:rgba(255,255,255,.7)}
+.timer .btn{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);box-shadow:none}
+.timer .btn.pri{background:#fff;color:#0c1632;border-color:#fff}
+.wrap{padding-bottom:130px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div><h1>Апталық оқу жоспары</h1><p class="sub" id="today"></p></div>
+<div style="display:flex;gap:8px"><button class="btn" id="theme">Түн / күн</button><button class="btn" id="resetW">Аптаны тазалау</button></div>
+</header>
+
+<section class="hero" aria-label="Апталық прогресс">
+<div class="big"><b id="pct">0%</b><span id="cnt" class="sub"></span></div>
+<div class="bar"><i id="pbar" style="width:0"></i></div>
+<div class="subs" id="subs"></div>
+<div class="dl" id="dl"></div>
+</section>
+
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="tool">
+<p id="goal"></p>
+<button class="btn" id="flt">Тек орындалмағандар</button>
+<button class="btn" id="resetD">Күнді тазалау</button>
+</div>
+<div id="list"></div>
+</div>
+
+<div class="timer" aria-live="polite">
+<span class="lbl" id="tlbl">Таймер: тапсырманы таңдаңыз</span>
+<output id="tout">00:00</output>
+<button class="btn pri" id="tgo">Бастау</button>
+<button class="btn" id="trs">Тастау</button>
+</div>
+
+<script>
+var SUB=[{n:"Математика",s:900},{n:"География",s:1020},{n:"Геометрия",s:1150},{n:"Тарих",s:1270}];
+var KN=["Математика","География","Геометрия","Тарих"];
+function mk(arr){return arr.map(function(a){return{t:a[0],h:a[1]||"",d:a[2]}})}
+var CP=[["базалық есептер","картамен жұмыс","есептер","себеп-салдар байланысы"]];
+var KH=["жаңа формулалар мен ережелер","терминдер мен жаңа тақырып","теоремалар мен сызбалар","даталар, оқиғалар"];
+function std(label,part){return SUB.map(function(_,i){return mk([[label,KH[i],35],["Практика",CP[0][i],30],["Үй жұмысы","",30],["Куиз","",15]])})}
+var DAYS=[
+{n:"Дүйсенбі",g:"Жаңа тақырыптар. Конспектінің 1/3 бөлігін жазыңыз.",k:1,x:std("Конспект 1/3")},
+{n:"Сейсенбі",g:"Конспектіні жалғастыру. 2/3 бөлігі аяқталуы тиіс.",k:2,x:std("Конспект 2/3")},
+{n:"Сәрсенбі",g:"Дедлайн: конспектіні толық аяқтау.",k:3,x:std("Соңғы конспект")},
+{n:"Бейсенбі",g:"Конспектісіз күн: практика мен күрделі тапсырмалар.",k:0,x:[
+mk([["Күрделі практика","",55],["Үй жұмысы","көлемді",40],["Куиз","",15]]),
+mk([["Практика","картаны жаттау, мәліметтерді талдау",55],["Үй жұмысы","",40],["Куиз","",15]]),
+mk([["Практика","дәлелдеу және есеп шығару",55],["Үй жұмысы","",35],["Куиз","",20]]),
+mk([["Практика","жылдарды, тұлғаларды жатқа айту",55],["Үй жұмысы","эссе не талдау жазу",35],["Куиз","",20]])]},
+{n:"Жұма",g:"Қорытындылау және апталық куиз күні.",k:0,x:[
+mk([["Қателермен жұмыс","үй жұмыстары мен практикадан қалған есептер",60],["Апталық үлкен куиз","",50]]),
+mk([["Дайын конспектіні қайта оқу","және қайталау",60],["Апталық үлкен куиз","",50]]),
+mk([["Формулалар мен теоремаларды жатқа қайталау","",60],["Апталық үлкен куиз","",50]]),
+mk([["Хронологиялық кестелерге шолу","",60],["Апталық үлкен куиз","",50]])]}
+];
+var KEY="plan-v1",S={done:{},notes:{},tab:0,flt:false,open:{}};
+try{var r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+var wd=new Date().getDay();if(wd>=1&&wd<=5&&!localStorage.getItem(KEY+"-v")){S.tab=wd-1}
+try{localStorage.setItem(KEY+"-v","1")}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function $(i){return document.getElementById(i)}
+function hm(m){return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
+// build flat tasks
+DAYS.forEach(function(d,di){d.items=[];d.x.forEach(function(ts,si){var t=SUB[si].s;ts.forEach(function(k,ti){k.id=di+"-"+si+"-"+ti;k.a=t;k.b=t+k.d;k.si=si;k.di=di;t+=k.d;d.items.push(k)})})});
+function nowMin(){var n=new Date();return n.getHours()*60+n.getMinutes()}
+function isNow(k){var n=new Date().getDay();return n===k.di+1&&nowMin()>=k.a&&nowMin()<k.b}
+function stat(items){var c=0;items.forEach(function(k){if(S.done[k.id])c++});return[c,items.length]}
+function render(){
+ var all=[];DAYS.forEach(function(d){all=all.concat(d.items)});
+ var w=stat(all),p=Math.round(100*w[0]/w[1]);
+ $("pct").textContent=p+"%";$("cnt").textContent=w[0]+" / "+w[1]+" блок орындалды";$("pbar").style.width=p+"%";document.documentElement.style.setProperty("--p",p);
+ $("today").textContent=new Date().toLocaleDateString("kk-KZ",{weekday:"long",day:"numeric",month:"long"});
+ $("subs").innerHTML=KN.map(function(n,i){var s=stat(all.filter(function(k){return k.si===i}));var q=Math.round(100*s[0]/s[1]);
+  return '<div><small><span>'+n+'</span><span>'+q+'%</span></small><div class="bar"><i style="width:'+q+'%;background:var(--c'+i+')"></i></div></div>'}).join("");
+ var kn=all.filter(function(k){return k.t.indexOf("онспект")>-1&&k.di<3}),ks=stat(kn);
+ $("dl").textContent="Конспект дедлайны (сәрсенбі): "+ks[0]+" / "+ks[1]+" блок. "+(ks[0]===ks[1]?"Дайын!":"Қалды: "+(ks[1]-ks[0]));
+ $("tabs").innerHTML=DAYS.map(function(d,i){var s=stat(d.items);var q=Math.round(100*s[0]/s[1]);
+  return '<button class="tab" role="tab" data-d="'+i+'" aria-selected="'+(i===S.tab)+'"><b>'+d.n+(wd===i+1?' · бүгін':'')+'</b><span>'+s[0]+'/'+s[1]+'</span><div class="bar"><i style="width:'+q+'%"></i></div></button>'}).join("");
+ var d=DAYS[S.tab];$("goal").textContent=d.g;$("flt").textContent=S.flt?"Барлығын көрсету":"Тек орындалмағандар";
+ var h="";
+ d.x.forEach(function(ts,si){
+  var s=stat(ts),rows="";
+  ts.forEach(function(k){
+   if(S.flt&&S.done[k.id])return;
+   var n=isNow(k),o=S.open[k.id];
+   rows+='<div class="task'+(S.done[k.id]?' done':'')+(n?' now':'')+'"><input type="checkbox" data-c="'+k.id+'" aria-label="Орындалды" '+(S.done[k.id]?'checked':'')+'>'
+   +'<span class="t">'+k.t+(n?'<span class="badge">қазір</span>':'')+'</span><span class="tm">'+hm(k.a)+'–'+hm(k.b)+'</span>'
+   +(k.h?'<span class="h">'+k.h+'</span>':'')
+   +'<div class="acts"><button data-f="'+k.id+'">Фокус '+k.d+' мин</button><button data-n="'+k.id+'">Жазба'+(S.notes[k.id]?' ●':'')+'</button></div>'
+   +(o?'<textarea data-t="'+k.id+'" placeholder="Жазба: не түсінбедім, не қайталау керек..."></textarea>':'')+'</div>'});
+  if(!rows)return;
+  h+='<section class="sec" style="--c:var(--c'+si+')"><h2>'+KN[si]+'<small>'+hm(ts[0].a)+'–'+hm(ts[ts.length-1].b)+' · '+s[0]+'/'+s[1]+'</small></h2>'+rows+'</section>';
+  if(si===0)h+='<div class="brk">16:50–17:00 үзіліс</div>';
+  if(si===1)h+='<div class="brk">18:50–19:10 кешкі ас</div>';
+  if(si===2)h+='<div class="brk">21:00–21:10 үзіліс</div>'});
+ $("list").innerHTML=h||'<div class="empty">Бұл күнгі барлық тапсырма орындалды. Жарайсың!</div>';
+ document.querySelectorAll("textarea[data-t]").forEach(function(t){t.value=S.notes[t.dataset.t]||""});
+}
+document.addEventListener("click",function(e){var t=e.target.closest("[data-d],[data-f],[data-n]");if(!t)return;
+ if(t.dataset.d!==undefined){S.tab=+t.dataset.d;save();render()}
+ else if(t.dataset.n){S.open[t.dataset.n]=!S.open[t.dataset.n];render()}
+ else if(t.dataset.f){var k=null;DAYS.forEach(function(d){d.items.forEach(function(x){if(x.id===t.dataset.f)k=x})});setT(k.d*60,k.t)}});
+document.addEventListener("change",function(e){var c=e.target.dataset.c;if(c){if(e.target.checked)S.done[c]=1;else delete S.done[c];save();render()}});
+document.addEventListener("input",function(e){var t=e.target.dataset.t;if(t){S.notes[t]=e.target.value;save()}});
+$("flt").onclick=function(){S.flt=!S.flt;save();render()};
+$("resetD").onclick=function(){if(confirm("Осы күнгі белгілерді тазалайсыз ба?")){DAYS[S.tab].items.forEach(function(k){delete S.done[k.id]});save();render()}};
+$("resetW").onclick=function(){if(confirm("Бүкіл аптаның белгілерін тазалайсыз ба? Жазбалар қалады.")){S.done={};save();render()}};
+$("theme").onclick=function(){var r=document.documentElement,dk=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);r.setAttribute("data-theme",dk?"light":"dark")};
+var tl=0,tt=null,tr=false;
+function showT(){$("tout").textContent=hm(Math.floor(tl/60)).slice(0,0)+("0"+Math.floor(tl/60)).slice(-2)+":"+("0"+tl%60).slice(-2)}
+function setT(sec,name){clearInterval(tt);tr=false;tl=sec;$("tlbl").textContent=name;$("tgo").textContent="Бастау";showT();toggle()}
+function toggle(){if(tl<=0)return;if(tr){clearInterval(tt);tr=false;$("tgo").textContent="Жалғастыру"}else{tr=true;$("tgo").textContent="Тоқтату";tt=setInterval(function(){tl--;showT();if(tl<=0){clearInterval(tt);tr=false;$("tgo").textContent="Бастау";$("tlbl").textContent="Уақыт бітті! Белгі қоюды ұмытпаңыз.";try{navigator.vibrate&&navigator.vibrate(300)}catch(e){}}},1000)}}
+$("tgo").onclick=toggle;
+$("trs").onclick=function(){clearInterval(tt);tr=false;tl=0;showT();$("tgo").textContent="Бастау";$("tlbl").textContent="Таймер: тапсырманы таңдаңыз"};
+render();setInterval(render,60000);
+</script>
+</body>
+</html>
